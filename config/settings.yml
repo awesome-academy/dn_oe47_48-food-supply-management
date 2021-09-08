@@ -1,0 +1,10 @@
+length:
+  max_name: 50
+  max_email: 150
+  min_password: 6
+  min_phone: 10
+  max_phone: 11
+product:
+  image_size: 50
+  min_description: 50
+  image_type: ["image/png", "image/jpg", "image/jpeg"]
