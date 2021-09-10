@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+5.times do |n|
+  name = "Category#{n+1}"
+  Category.create!(name: name)
+end
+
+categorys = Category.order(:created_at).take(5)
+5.times do |n|
+  name = "Catego#{n+1}"
+  categorys.each {|categorys |  categorys.products.create!(name: name, description:"descri s"*50, price: 600, quantity: 9 )}
+end

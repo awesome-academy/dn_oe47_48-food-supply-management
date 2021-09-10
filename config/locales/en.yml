@@ -1,4 +1,35 @@
 en:
   english: "English"
   vietnamese: "Vietnamese"
-
+  product: "Product"
+  information: "Information"
+  extras: "Extras"
+  static_pages:
+    home:
+      header1: "FREE DELIVERY: Take advantage of our time to save event"
+      header2: "Join hands to fight covid-19"
+      search: "Search entire store here..."
+      home: "Home"
+      aboutus: "About Us"
+      shop: "Shop"
+      pages: "Pages"
+      blog: "Blog"
+      contactus: "Contact Us"
+      my_account: "My Account"
+      address: "Address: Da Nang city"
+      email: "Email: demo@example.com"
+      phone: "Phone:(+012) 800 456 789 - 987"
+      lable_footer: "Join Our Newsletter Now"
+      note: "Exceptional quality. Ethical factories. Sign up to enjoy free
+                Da Nang shipping and returns on your first order."
+  categories:
+    index:
+      category_product: "Product categories"
+    show:
+      product_category_id: "product list by category "
+  products:
+    show:
+      detail_product: "Detail Product"
+      quantity: "Quantity"
+      add_to_cart: "add to cart"
+      share_on: "Share on:"

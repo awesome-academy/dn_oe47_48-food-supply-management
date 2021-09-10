@@ -4,6 +4,7 @@ length:
   min_password: 6
   min_phone: 10
   max_phone: 11
+  pages_10: 10
 product:
   image_size: 50
   min_description: 50
