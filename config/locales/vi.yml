@@ -49,3 +49,6 @@ vi:
       quantity: "Số lượng"
       add_to_cart: "thêm vào giỏ hàng"
       share_on: "Chia sẻ:"
+    search:
+      not_found: "không tìm thấy!"
+      search: "Tìm kiếm"

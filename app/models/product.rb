@@ -18,4 +18,9 @@ class Product < ApplicationRecord
               less_than: Settings.product.image_size.megabytes,
               message: :image_invalid_size
             }
+  scope :search_categories, (lambda do |key|
+    joins(:category)
+    .where("categories.name LIKE ?", "%#{key}%")
+  end)
+  scope :search_products, ->(key){where "products.name LIKE ?", "%#{key}%"}
 end
