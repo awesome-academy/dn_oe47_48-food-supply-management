@@ -1,3 +1,50 @@
+puts "Start create!"
+5.times do
+  name = Faker::Address.city
+  District.create!(name: name)
+end
+
+i = 1
+while i<6
+  10.times do |n|
+    name = Faker::Address.city
+    district_id = i
+    Town.create!(name: name, district_id: district_id)
+  end
+  i+=1
+end
+
+User.create!(
+  full_name: "Hoang Nhan",
+  email: "tranhuyhoangvct@gmail.com",
+  phone: "0961162634",
+  street: Faker::Address.street_address,
+  password: "123123123",
+  password_confirmation: "123123123",
+  role: "admin",
+  town_id: 1
+)
+
+50.times do |n|
+  full_name = Faker::Name.name
+  email = "email#{n}@gmail.com"
+  phone = Faker::Number.number(digits: 10)
+  street = Faker::Address.street_address
+  password = "123123123"
+  password_confirmation = "123123123"
+  role = "buyer"
+  town_id = 2
+
+  User.create!(
+    full_name: full_name, email: email,
+    phone: phone,
+    street: street,
+    password: password,
+    password_confirmation: password,
+    role: role,
+    town_id: town_id
+  )
+end
 5.times do |n|
   name = "Category#{n+1}"
   Category.create!(name: name)
@@ -8,3 +55,4 @@ categorys = Category.order(:created_at).take(5)
   name = "Catego#{n+1}"
   categorys.each {|categorys |  categorys.products.create!(name: name, description:"descri s"*50, price: 600, quantity: 9 )}
 end
+puts "Completed!"

@@ -1,6 +1,22 @@
 en:
   english: "English"
   vietnamese: "Vietnamese"
+  user:
+    nil: "User not found!"
+    login:
+      title: "Login"
+      remember: "Remember login?"
+      password: "Password"
+      forgot_password: "Forgot your password?"
+      failed: "Invalid information! Please try again!"
+      success: "Login success!"
+      reuquire: "Please login to access more!"
+    logout:
+      title: "Logout"
+      success: "Logout success!"
+    profile:
+      title: "My profile"
+    account: "My account"
   product: "Product"
   information: "Information"
   extras: "Extras"

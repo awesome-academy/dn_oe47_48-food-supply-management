@@ -1,6 +1,22 @@
 vi:
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
+  user:
+    nil: "Không tìm thấy người dùng!"
+    login:
+      title: "Đăng nhập"
+      remember: "Ghi nhớ đăng nhập?"
+      password: "Mật khẩu"
+      forgot_password: "Quên mật khẩu?"
+      failed: "Thông tin đăng nhập sai. Vui lòng thử lại!"
+      success: "Đăng nhập thành công!"
+      reuquire: "Vui lòng đăng nhập để truy cập nhiều hơn!"
+    logout:
+      title: "Đăng xuất"
+      success: "Đăng xuất thành công!"
+    profile:
+      title: "Thông tin của tôi"
+    account: "Tài khoản"
   product: "Sản Phẩm"
   information: "Thông tin"
   extras: "tính năng bổ sung"

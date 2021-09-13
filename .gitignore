@@ -2,6 +2,7 @@
 .browserslistrc
 capybara-*.html
 .rspec
+.vscode/*
 /.framgia-ci-reports/
 .framgia-ci-result.temp.yml
 /config/database.yml
