@@ -1,3 +1,35 @@
 vi:
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
+  product: "Sản Phẩm"
+  information: "Thông tin"
+  extras: "tính năng bổ sung"
+  static_pages:
+    home:
+      header1: "GIAO HÀNG MIỄN PHÍ: Tận dụng thời gian"
+      header2: "Chung tay chống lại covid-19"
+      search: "Tìm mọi thứ ở đây..."
+      home: "Trang Chủ"
+      aboutus: "Về chúng tôi"
+      shop: "Cửa hàng"
+      pages: "Trang"
+      blog: "Blog"
+      contactus: "Liên hệ chúng tôi"
+      my_account: "My Account"
+      address: "Địa chỉ: Da Nang city"
+      email: "Email: demo@example.com"
+      phone: "Điện thoại:(+012) 800 456 789 - 987"
+      lable_footer: "Tham gia bản tin của chúng tôi ngay bây giờ"
+      note: "Chât lượng vượt trội. Đạo đức nhà máy. Đăng ký để tận hưởng miễn phí
+                Giao hàng tại Đà nẵng và trả hàng cho đơn hàng đầu tiên của bạn."
+  categories:
+    index:
+      category_product: "Danh mục sản phẩm"
+    show:
+      product_category_id: "Danh sách sản phẩm bởi danh mục "
+  products:
+    show:
+      detail_product: "Chi tiết sản phẩm"
+      quantity: "Số lượng"
+      add_to_cart: "thêm vào giỏ hàng"
+      share_on: "Chia sẻ:"

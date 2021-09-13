@@ -1,0 +1,14 @@
+<% provide :title, t("categories.show.product_category_id") %>
+<h3><%= t("categories.show.product_category_id") %><%= @category.name %></h3>
+<div class="row shop_wrapper grid_4">
+  <%= render @products %>
+</div>
+<% if @products.any? %>
+  <div class="shop_toolbar t_bottom">
+    <div class="pagination">
+      <%= paginate @products %>
+    </div>
+  </div>
+<% else %>
+  <h2><%= t("products.search.not_found") %></h2>
+<% end %>

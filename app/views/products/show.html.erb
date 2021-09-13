@@ -1,0 +1,67 @@
+<% provide :title, t("products.show.detail_product") %>
+<div class="breadcrumbs_area product_bread">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumb_content">
+          <ul>
+            <li><%= link_to t("static_pages.home.home") %></li>
+            <li>/</li>
+            <li><%= t("products.show.detail_product") %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="product_details">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-5">
+        <div class="product-details-tab">
+          <div id="img-1" class="zoomWrapper single-zoom">
+            <%= image_tag "product/product5" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-7">
+        <div class="product_d_right">
+          <form action="#">
+            <h1><%= @product.name %></h1>
+            <div class="product_price">
+              <span class="current_price"><%= number_to_currency @product.price %></span>
+            </div>
+            <div class="product_desc">
+              <p><%=@product.description %></p>
+            </div>
+            <div class="product_variant quantity">
+              <label><%= t("products.show.quantity") %></label>
+              <input min="1" max="100" value="1" type="number" />
+              <button class="button" type="submit"><%= t("products.show.add_to_cart") %></button>
+            </div>
+          </form>
+          <div class="priduct_social">
+            <h3><%= t("products.show.share_on") %></h3>
+            <ul>
+              <li>
+                <i class="fa fa-rss"></i>
+              </li>
+              <li>
+                <i class="fa fa-vimeo"></i>
+              </li>
+              <li>
+                <i class="fa fa-tumblr"></i>
+              </li>
+              <li>
+                <i class="fa fa-pinterest"></i>
+              </li>
+              <li>
+                <i class="fa fa-linkedin"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
