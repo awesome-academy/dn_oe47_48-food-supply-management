@@ -1,2 +1,7 @@
 $('#page-inner').html('<%= j render "admin/orders/show_orders" %>');
+$('#flash').html('<%= j render "shared/notice_banner" %>');
 $('#paginator').html('<%= j paginate @orders, remote: true %>');
+$(function(){
+  setTimeout(function(){
+    $('#flash').remove();}, 5000)
+});

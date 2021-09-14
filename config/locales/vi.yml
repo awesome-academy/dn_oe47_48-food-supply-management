@@ -48,6 +48,11 @@ vi:
       total: "Tổng"
       note: "Ghi chú"
       status: "Trạng thái"
+      update_sc: "Cập nhật thành công!"
+      update_failed: "Cập nhật thất bại!"
+      update_cant_change: "Không thể thay đổi trạng thái này!"
+      update_pre: "Không thể thay đổi về trạng thái trước"
+      update_not_ship: "Đơn hàng chưa được vận chuyển!"
     delete: "Xoá"
     edit: "Sửa"
   product: "Sản Phẩm"
@@ -99,6 +104,11 @@ vi:
       search: "Tìm kiếm"
   orders:
     title: "Đơn hàng"
+    status:
+      processing: "Đang xử lý"
+      canceled: "Đã hủy"
+      shipped: "Đã ship"
+      completed: "Hoàn thành"
 
   views:
     pagination:

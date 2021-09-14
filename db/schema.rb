@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_124431) do
   create_table "order_products", charset: "utf8mb3", force: :cascade do |t|
     t.float "quantity"
     t.float "price"
+    t.string "product_name"
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -123,7 +124,6 @@ ActiveRecord::Schema.define(version: 2021_09_08_124431) do
   add_foreign_key "cart_sessions", "products"
   add_foreign_key "cart_sessions", "users"
   add_foreign_key "order_products", "orders"
-  add_foreign_key "order_products", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "towns", "districts"
