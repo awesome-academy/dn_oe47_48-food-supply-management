@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :phone
       t.string :street
       t.string :password_digest
+      t.string :remember_digest
       t.integer :role, null: false, default: 3
       t.references :town, null: false, foreign_key: true
 

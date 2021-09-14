@@ -1,62 +1,8 @@
-/*-----------------------------------------------------------------------------------
-
-    
-    CSS INDEX
-    =========================================
-	
-    01. Theme default CSS
-        - Common Classes
-        - Section Padding
-    02. Element
-        - Button Style 
-        - Section Title Css
-        - Breadcrumb Style
-        - Paginatoin Css
-    03. header css here
-    04. slider area css here
-    05. product section css here
-    06. banner section css here 
-    07. blog area css here
-    08. instagram area css here
-    09. footer area css here
-    10. shop page css here
-    11. error page css heer 
-    12. about page css here
-    13. blog page css here 
-    14. blog details css here
-    15. cart page css here
-    16. checkout page css here
-    17. contact page css here
-    18. faq page css here
-    19. login page css here
-    20. my account css here
-    21. portfolio page css here
-    22. services page css here
-    23. shipping css here
-    24. wishlist css here
-    25. newsletter popup css here
-    26. modal css here
-    27. compare css here
-    28. privacy policy css here
-    29. coming soon css here
-    
-    
-
------------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,500,500i,600,600i,700,700i,800,800i,900,900i|Playfair+Display:400,400i,700,700i,900,900i|Abril+Fatface&subset=latin-ext");
 * {
   box-sizing: border-box;
 }
 
-/* transition */
-/* flex */
-/* transform */
-/* opacity */
-/*----------------------------------------*/
-/*  01. Theme default CSS
-/*----------------------------------------*/
-/*-- Google Font --*/
-/*-- Common Style --*/
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -64,7 +10,16 @@
 html, body {
   height: 100%;
 }
-
+.dropdown-menu > li{
+  font-size: 12px;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.customer_login {
+  padding: 0 30%;
+  padding-bottom: 59px;
+}
 body {
   line-height: 24px;
   font-size: 13px;
@@ -9888,7 +9843,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   height: 40px;
   max-width: 100%;
   padding: 0 20px;
-  background: none;
   width: 100%;
 }
 .account_form button {

@@ -1,5 +1,4 @@
 <header class="header_area header_three">
-  <!--header top start-->
   <div class="header_top">
     <div class="container-fluid">
       <div class="row align-items-center">
@@ -16,20 +15,29 @@
         <div class="col-lg-5 col-md-12">
           <div class="top_right text-right">
             <ul>
-              <li class="top_links">
-                <%= link_to t("static_pages.home.my_account"), "#" %>
-              </li>
-              <li><%= link_to t("english"), locale:"en" %></li>
-              <li><%= link_to t("vietnamese"), locale:"vi" %></li>
+              <% if logged_in? %>
+                <li class="dropdown">
+                  <%= link_to("#", class: "dropdown-toggle", role: "button", data:{toggle: "dropdown"}) do %>
+                    <%= t "user.account" %> <b class="caret"></b> 
+                  <% end %> 
+                  <ul class="dropdown-menu">
+                    <li><%= link_to t("user.profile.title"), current_user %></li>
+                    <li><%= link_to "Orders", "#" %></li>
+                    <li><%= link_to t("user.logout.title"), logout_path, method: :delete %></li>
+                  </ul>
+                </li>
+              <% else %>
+                <li><%=  link_to t("user.login.title"), login_path %></li>
+              <% end %>
+                <li><%= link_to t("english"), locale: :en %></li>
+                <li><%= link_to t("vietnamese"), locale: :vi %></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--header top start-->
 
-  <!--header middel start-->
   <div class="header_middel">
     <div class="container-fluid">
       <div class="middel_inner">
@@ -102,9 +110,6 @@
       </div>
     </div>
   </div>
-  <!--header middel end-->
-
-  <!--header bottom satrt-->
   <div class="header_bottom sticky-header">
     <div class="container">
       <div class="row align-items-center">

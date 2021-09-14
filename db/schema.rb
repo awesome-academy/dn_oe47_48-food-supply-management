@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_124431) do
     t.string "phone"
     t.string "street"
     t.string "password_digest"
+    t.string "remember_digest"
     t.integer "role", default: 3, null: false
     t.bigint "town_id", null: false
     t.datetime "created_at", precision: 6, null: false
