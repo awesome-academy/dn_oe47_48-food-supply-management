@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-  before_action :set_locale
+  include ApplicationHelper
+
+  before_action :set_locale, :create_cart, :load_products
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
@@ -22,5 +25,9 @@ class ApplicationController < ActionController::Base
 
     flash[:warning] = t "user.login.isnt_admin"
     redirect_to root_url
+  end
+
+  def create_cart
+    session[:cart] ||= {}
   end
 end

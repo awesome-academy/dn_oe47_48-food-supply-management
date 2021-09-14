@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def show
     @product = Product.find_by id: params[:id]
+    store_location
     return if @product
 
     flash[:danger] = t "product.not_found"
