@@ -27,6 +27,8 @@ class User < ApplicationRecord
 
   before_save{email.downcase!}
 
+  scope :order_by_name, ->{order :full_name}
+
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost
              BCrypt::Engine::MIN_COST

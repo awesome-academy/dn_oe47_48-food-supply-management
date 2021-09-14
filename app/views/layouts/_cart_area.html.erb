@@ -1,0 +1,48 @@
+<div class="cart_area">
+  <div class="cart_link">
+    <%= link_to "#" do %>
+      <i class="fa fa-shopping-basket"></i>
+      <span>(2) Item</span>
+    <% end %>
+    <!--mini cart-->
+    <div class="mini_cart">
+      <div class="cart_item top">
+        <div class="cart_img"><%= image_tag("logo/logo") %></div>
+        <div class="cart_info">
+          <%= link_to "Food", "#" %>
+          <span>1x $60.00</span>
+        </div>
+      </div>
+      <div class="cart_item bottom">
+        <div class="cart_img"><%= image_tag("logo/logo") %></div>
+        <div class="cart_info">
+          <%= link_to "Drink", "#" %>
+          <span> 1x $160.00</span>
+        </div>
+      </div>
+      <div class="cart__table">
+        <table>
+          <tbody>
+            <tr>
+              <td class="text-left">Sub-Total :</td>
+              <td class="text-right">$150.00</td>
+            </tr>
+
+            <tr>
+              <td class="text-left">Total :</td>
+              <td class="text-right">$184.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cart_button view_cart">
+        <%= link_to "View Card", "#" %>
+      </div>
+      <div class="cart_button checkout">
+        <%= link_to "Check Out", "#" %>
+      </div>
+    </div>
+    <!--mini cart end-->
+  </div>
+</div>

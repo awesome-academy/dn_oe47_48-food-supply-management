@@ -9,8 +9,14 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/search", to: "products#search"
-    resources :users
     resources :static_pages
+
+    namespace :admin do
+      root "admins#index"
+      resources :users, only: %i(index)
+    end
+
+    resources :users, except: %i(index destroy)
     resources :categories
     resources :products, only: %i(show)
   end

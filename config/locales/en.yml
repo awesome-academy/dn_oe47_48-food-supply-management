@@ -2,6 +2,11 @@ en:
   english: "English"
   vietnamese: "Vietnamese"
   user:
+    username: "Username"
+    email: "Email"
+    phone: "Phone"
+    address: "Address"
+    inactive: "Inactive"
     nil: "User not found!"
     login:
       title: "Login"
@@ -10,13 +15,19 @@ en:
       forgot_password: "Forgot your password?"
       failed: "Invalid information! Please try again!"
       success: "Login success!"
-      reuquire: "Please login to access more!"
+      require: "Please login to access more!"
+      isnt_admin: "Only administrators can access it. Please contact if you need more information."
     logout:
       title: "Logout"
       success: "Logout success!"
     profile:
       title: "My profile"
     account: "My account"
+    manage:
+      user: "Manage users"
+  admin:
+    all_buyers: "All buyers"
+
   product: "Product"
   information: "Information"
   extras: "Extras"
@@ -52,3 +63,14 @@ en:
     search:
       not_found: "Not Found!"  
       search: "Search"
+  orders:
+    title: "Order"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      next: Next &rsaquo;
+      previous: "&lsaquo; Prev"
+      truncate: "&hellip;"
+  alert:
+    confirm: "Are you sure?"
