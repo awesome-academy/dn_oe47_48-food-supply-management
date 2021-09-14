@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
     namespace :admin do
       root "admins#index"
-      resources :users, only: %i(index)
+      resources :users, only: :index
     end
 
     resources :users, except: %i(index destroy)
     resources :categories
-    resources :products, only: %i(show)
+    resources :products, only: :show
   end
 end

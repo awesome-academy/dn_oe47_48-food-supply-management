@@ -1,0 +1,36 @@
+<nav class="navbar-default navbar-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav" id="main-menu">
+      <li>
+        <%= link_to admin_root_path do %>
+          <i class="fa fa-dashboard fa-3x"></i>
+          <span><%= t("static_pages.home.home") %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to admin_users_path, remote: true do %>
+          <i class="fa fa-user fa-3x"></i>
+          <span><%= t("user.manage.user") %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-list fa-3x"></i>
+          <span><%= t("categories.title") %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+        <i class="fa fa-cutlery fa-3x"></i>
+          <span><%= t("product") %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-pencil-square-o fa-3x"></i>
+          <span><%= t("orders.title") %></span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

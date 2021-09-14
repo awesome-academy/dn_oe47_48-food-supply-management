@@ -1,0 +1,26 @@
+<% provide(:title, t("admin.all_buyers")) %>
+<div class="container">
+  <h3 class="center_custome"><%= t "admin.all_buyers" %></h3>
+  <div class="row">
+    <div class="col-lg-12 col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><%= t "user.username" %></th>
+            <th scope="col"><%= t "user.email" %></th>
+            <th scope="col"><%= t "user.phone" %></th>
+            <th scope="col"><%= t "user.address" %></th>
+            <th scope="col" style="text-align: center"><%= t "user.inactive" %></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render(@users) || t("user.nil") %>
+        </tbody>
+      </table>
+      <div class="center">
+        <%= paginate @users, remote: true %>
+      </div>
+    </div>
+  </div>
+</div>
