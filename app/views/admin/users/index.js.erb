@@ -1,2 +1,2 @@
 $('#page-inner').html('<%= j render "admin/users/show_users" %>');
-$('#paginator').html('<%= j paginate(@users, remote: true) %>');
+$('#paginator').html('<%= j paginate @users, remote: true %>');
