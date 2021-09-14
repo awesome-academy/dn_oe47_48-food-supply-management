@@ -21,6 +21,9 @@
                     <%= t "user.account" %> <b class="caret"></b> 
                   <% end %> 
                   <ul class="dropdown-menu">
+                    <% if @current_user.admin? %>
+                      <li><%= link_to "Manage users", admin_buyers_path %></li>
+                    <% end %>
                     <li><%= link_to t("user.profile.title"), current_user %></li>
                     <li><%= link_to "Orders", "#" %></li>
                     <li><%= link_to t("user.logout.title"), logout_path, method: :delete %></li>
