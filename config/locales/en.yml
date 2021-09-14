@@ -26,11 +26,20 @@ en:
     manage:
       page: "Manage page"
       user: "Manage users"
-
   admin:
     manage:
       title: "MANAGE PAGE"
     all_buyers: "All buyers"
+    product:
+      title: "Products"
+      name: "Product's name"
+      image: "Image"
+      description: "Description"
+      price: "Price"
+      quantity: "Quantity"
+      action: "Actions"
+    delete: "Delete"
+    edit: "Edit"
 
   product: "Product"
   information: "Information"

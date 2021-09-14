@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root "admins#index"
       resources :users, only: :index
+      resources :products, only: :index
     end
 
     resources :users, except: %i(index destroy)
