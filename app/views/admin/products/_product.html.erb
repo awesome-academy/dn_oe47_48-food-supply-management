@@ -1,6 +1,6 @@
 <tr>
   <td><%= product.name %></td>
-  <td><%= product_image product %></td>
+  <td><%= image_tag(product.image, class: "image_size") if product.image.attached? %></td>
   <td><%= product.description %></td>
   <td><%= number_to_currency product.price %></td>
   <td><%= product.quantity %></td>

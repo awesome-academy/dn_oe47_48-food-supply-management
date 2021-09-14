@@ -10,8 +10,20 @@
 html, body {
   height: 100%;
 }
+.dropdown{
+  list-style-position: inside;
+  border: 1px solid black;
+  list-style-type: none;
+}
+.dropdown a{
+  padding-left: 4px;
+}
+.dropdown-menu{
+  min-width: 120px;
+}
 .dropdown-menu > li{
   font-size: 12px;
+  border: 1px solid black
 }
 .open > .dropdown-menu {
   display: block;

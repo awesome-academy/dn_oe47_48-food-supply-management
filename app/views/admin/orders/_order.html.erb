@@ -18,5 +18,23 @@
   </td>
   <td><%= number_to_currency order.total %></td>
   <td><%= order.note  %></td>
-  <td><%=  order.status %></td>
+  <td>
+    <li class="dropdown">
+      <%= link_to("#", class: "dropdown-toggle", role: "button", data:{toggle: "dropdown"}) do %>
+        <%= order.status.titleize %> <b class="caret"></b> 
+      <% end %>
+      <ul class="dropdown-menu">
+        <% Order.statuses.keys.each do |status| %>
+          <% unless status == order.status %>
+            <li>
+              <%= link_to admin_orders_path({order_id: order.id, status: status}), remote: true  do %>
+                <span><%= status.titleize %></span>
+              <% end %>
+            </li>
+          <% end %>
+        <% end %>
+      <ul>
+    </li>
+  </td>
+  
 </tr>
