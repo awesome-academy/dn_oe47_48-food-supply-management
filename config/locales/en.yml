@@ -49,3 +49,6 @@ en:
       quantity: "Quantity"
       add_to_cart: "add to cart"
       share_on: "Share on:"
+    search:
+      not_found: "Not Found!"  
+      search: "Search"
