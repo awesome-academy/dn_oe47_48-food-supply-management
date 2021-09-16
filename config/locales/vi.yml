@@ -2,6 +2,11 @@ vi:
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
   user:
+    username: "Họ & tên"
+    email: "Email"
+    phone: "Điện thoại"
+    address: "Địa chỉ"
+    inactive: "Xoá"
     nil: "Không tìm thấy người dùng!"
     login:
       title: "Đăng nhập"
@@ -10,13 +15,19 @@ vi:
       forgot_password: "Quên mật khẩu?"
       failed: "Thông tin đăng nhập sai. Vui lòng thử lại!"
       success: "Đăng nhập thành công!"
-      reuquire: "Vui lòng đăng nhập để truy cập nhiều hơn!"
+      require: "Vui lòng đăng nhập để truy cập nhiều hơn!"
+      isnt_admin: "Chỉ quản trị viên mới có thể truy cập. Vui lòng liên hệ nếu bạn cần thêm thông tin."
     logout:
       title: "Đăng xuất"
       success: "Đăng xuất thành công!"
     profile:
       title: "Thông tin của tôi"
     account: "Tài khoản"
+    manage:
+      user: "Quản lý người dùng"
+
+  admin:
+    all_buyers: "Tất cả người mua hàng"
   product: "Sản Phẩm"
   information: "Thông tin"
   extras: "tính năng bổ sung"
@@ -52,3 +63,15 @@ vi:
     search:
       not_found: "không tìm thấy!"
       search: "Tìm kiếm"
+  orders:
+    title: "Đơn hàng"
+
+  views:
+    pagination:
+      first: "&laquo; Đầu"
+      last: Cuối &raquo;
+      next: Tiếp &rsaquo;
+      previous: "&lsaquo; Trước"
+      truncate: "&hellip;"
+  alert:
+    confirm: "Bạn có chắc chứ?"

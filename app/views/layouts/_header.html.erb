@@ -21,8 +21,11 @@
                     <%= t "user.account" %> <b class="caret"></b> 
                   <% end %> 
                   <ul class="dropdown-menu">
+                    <% if current_user.admin? %>
+                      <li><%= link_to t("user.manage.user"), admin_users_path %></li>
+                    <% end %>
                     <li><%= link_to t("user.profile.title"), current_user %></li>
-                    <li><%= link_to "Orders", "#" %></li>
+                    <li><%= link_to t("orders.title"), "#" %></li>
                     <li><%= link_to t("user.logout.title"), logout_path, method: :delete %></li>
                   </ul>
                 </li>
@@ -43,90 +46,23 @@
       <div class="middel_inner">
         <div class="row align-items-center">
           <div class="col-lg-4">
-            <div class="search_bar">
-              <%= form_tag search_path, method: :get do %>
-                <%= text_field_tag :search, params[:search], required: true %>
-                <%= submit_tag t("products.search.search") %>
-              <%end%>
-            </div>
+            <% if hidden_with_admin? %>
+              <%= render "layouts/search_bar" %>
+            <% end %>
           </div>
           <div class="col-lg-4">
-            <div class="logo"><%= image_tag("logo/logo")%></div>
+            <div class="logo"><%= image_tag("logo/logo") %></div>
           </div>
           <div class="col-lg-4">
-            <div class="cart_area">
-              <div class="cart_link">
-                <%= link_to "#" do %>
-                  <i class="fa fa-shopping-basket"></i>
-                  <span>(2) Item</span>
-                <% end%>
-                <!--mini cart-->
-                <div class="mini_cart">
-                  <div class="cart_item top">
-                    <div class="cart_img"><%= image_tag("logo/logo") %></div>
-                    <div class="cart_info">
-                      <%= link_to "Food", "#" %>
-                      <span>1x $60.00</span>
-                    </div>
-                  </div>
-                  <div class="cart_item bottom">
-                    <div class="cart_img"><%= image_tag("logo/logo") %></div>
-                    <div class="cart_info">
-                      <%= link_to "Drink", "#" %>
-                      <span> 1x $160.00</span>
-                    </div>
-                  </div>
-                  <div class="cart__table">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td class="text-left">Sub-Total :</td>
-                          <td class="text-right">$150.00</td>
-                        </tr>
-
-                        <tr>
-                          <td class="text-left">Total :</td>
-                          <td class="text-right">$184.00</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class="cart_button view_cart">
-                    <%= link_to "View Card", "#" %>
-                  </div>
-                  <div class="cart_button checkout">
-                    <%= link_to "Check Out", "#" %>
-                  </div>
-                </div>
-                <!--mini cart end-->
-              </div>
-            </div>
+            <% if hidden_with_admin? %>
+              <%= render "layouts/cart_area" %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="header_bottom sticky-header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="main_menu_inner">
-            <div class="main_menu">
-              <nav>
-                <ul>
-                  <li><%= link_to t("static_pages.home.home"), "#" %></li>
-                  <li><%= link_to t("static_pages.home.shop"), "#" %></li>
-                  <li><%= link_to t("static_pages.home.aboutus"), "#" %></li>
-                  <li><%= link_to t("static_pages.home.blog"), "#" %></li>
-                  <li><%= link_to t("static_pages.home.pages"), "#" %></li>
-                  <li><%= link_to t("static_pages.home.contactus"), "#" %></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <% if hidden_with_admin? %>
+    <%= render "layouts/header_bottom" %>
+  <% end %>
 </header>

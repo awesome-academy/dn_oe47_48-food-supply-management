@@ -20,6 +20,52 @@ html, body {
   padding: 0 30%;
   padding-bottom: 59px;
 }
+.center_custome{
+  display: table;
+  margin: 10px auto;
+}
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #DDD;
+  border-left-width: 0;
+}
+.text_center{
+  text-align: center;
+}
+.pagination {
+  display: table;
+  margin: auto;
+  border-left: 1px solid #ddd;
+  .first{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .prev {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .page{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .next{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .last{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+}
 body {
   line-height: 24px;
   font-size: 13px;
@@ -119,7 +165,8 @@ ul {
     - Common Classes
 -----------------------------------------*/
 .container {
-  max-width: 1140px;
+  max-width: 85%;
+  padding: 1rem;
 }
 
 .fix {
@@ -1895,7 +1942,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .header_three .logo {
   text-align: center;
-  display: none;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1799px) {
   .header_three .logo {
