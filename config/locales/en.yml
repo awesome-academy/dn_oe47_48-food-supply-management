@@ -24,8 +24,12 @@ en:
       title: "My profile"
     account: "My account"
     manage:
+      page: "Manage page"
       user: "Manage users"
+
   admin:
+    manage:
+      title: "MANAGE PAGE"
     all_buyers: "All buyers"
 
   product: "Product"
@@ -50,6 +54,7 @@ en:
       note: "Exceptional quality. Ethical factories. Sign up to enjoy free
                 Da Nang shipping and returns on your first order."
   categories:
+    title: "Categories"
     index:
       category_product: "Product categories"
     show:
