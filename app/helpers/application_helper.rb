@@ -12,6 +12,10 @@ module ApplicationHelper
     (product.price * current_cart[product.id.to_s].to_f).round(3)
   end
 
+  def into_money_cart
+    @products_in_cart.sum{|product| into_money(product)}
+  end
+
   def current_cart
     @current_cart ||= session[:cart]
   end

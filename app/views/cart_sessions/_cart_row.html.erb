@@ -1,0 +1,14 @@
+<td><%= product.name %></td>
+<td><%= number_to_currency(product.price, locale: :vi) %></td>
+<td><%= image_tag("logo/logo") %></td>
+<td>
+  <%= form_tag change_cart_sessions_path,remote:true do %>
+    <%= number_field_tag :quantity, nil, step: 0.1, value: current_cart[product.id.to_s].round(1), required: true, min: 0.1, max: product.quantity %>
+    <%= hidden_field_tag :product_id, nil, value: product.id %>
+    <%= button_tag t("carts.update.update_cart"), class: "button" %>
+  <% end %>
+</td>
+<td><%= number_to_currency(into_money(product), locale: :vi) %></td>
+<td>
+  <%= link_to t("carts.update.delete_cart"), remove_cart_sessions_path(product_id: product.id), {data: {confirm: t("carts.delete.alert_delete")}, method: :delete, remote: true, class: "btn-close"} %>
+</td>

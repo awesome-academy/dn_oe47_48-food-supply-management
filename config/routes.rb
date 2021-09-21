@@ -9,6 +9,14 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/search", to: "products#search"
+
+    resources :cart_sessions, only: %i(index create) do
+      collection do
+        post "change"
+        delete "remove"
+      end
+    end
+    
     resources :cart_sessions
     resources :users
     resources :static_pages
