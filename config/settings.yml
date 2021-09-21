@@ -10,4 +10,5 @@ product:
   min_description: 50
   image_type: ["image/png", "image/jpg", "image/jpeg"]
 per_page:
+  per_5: 5
   per_10: 10

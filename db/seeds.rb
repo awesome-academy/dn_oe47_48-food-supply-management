@@ -50,9 +50,15 @@ end
   Category.create!(name: name)
 end
 
-categorys = Category.order(:created_at).take(5)
+categories = Category.order(:created_at).take(5)
 5.times do |n|
-  name = "Catego#{n+1}"
-  categorys.each {|categorys |  categorys.products.create!(name: name, description:"descri s"*50, price: 600, quantity: 9 )}
+  name = "Category#{n+1}"
+  categories.each do |categories |
+    file_name = "product#{n+1}.jpg"
+    categories.products.create!(name: name, description:"descri s"*50, price: 600, quantity: 9 )
+    categories.products.each do |product|
+      product.image.attach(io: File.open(Rails.root.join("app/assets/images/product/#{file_name}")), filename: file_name)
+    end
+  end
 end
 puts "Completed!"

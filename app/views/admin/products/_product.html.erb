@@ -1,0 +1,11 @@
+<tr>
+  <td><%= product.name %></td>
+  <td><%= product_image product %></td>
+  <td><%= product.description %></td>
+  <td><%= number_to_currency product.price %></td>
+  <td><%= product.quantity %></td>
+  <td class="text_center">
+    <%= link_to t("admin.delete"), "#", data: { confirm: t("alert.confirm")} %>
+    <%= link_to t("admin.edit"), "#" %>
+  </td>
+</tr>
