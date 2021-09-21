@@ -1,0 +1,2 @@
+$('#page-inner').html('<%= j render "admin/orders/show_orders" %>');
+$('#paginator').html('<%= j paginate @orders, remote: true %>');

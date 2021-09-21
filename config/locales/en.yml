@@ -38,6 +38,14 @@ en:
       price: "Price"
       quantity: "Quantity"
       action: "Actions"
+    order:
+      nil: "There are no orders to display"
+      buyer_inf: "Buyer's information"
+      address: "Delivery address"
+      details: "Details"
+      total: "Total"
+      note: "Note"
+      status: "Status"
     delete: "Delete"
     edit: "Edit"
 
@@ -79,6 +87,7 @@ en:
       search: "Search"
   orders:
     title: "Order"
+
   views:
     pagination:
       first: "&laquo; First"

@@ -1,0 +1,22 @@
+<tr>
+  <td>
+    <%= order.full_name %></br>
+    <%= order.email %></br>
+    <%= order.phone %></br>
+  </td>
+  <td>
+    <%= order.street %></br>
+    <%= order.town.name %>, <%= order.town.district_name %>
+  </td>
+  <td>
+    <% order.order_products.each do |order_product| %>
+      <span><%= t("admin.product.name") %>:</span><%= order_product.product.name %>
+      <span><%= t("admin.product.price") %>:</span><%= number_to_currency order_product.product.price %>
+      <span><%= t("admin.product.quantity") %>:</span><%= order_product.quantity %>
+      </br>
+    <% end %>
+  </td>
+  <td><%= number_to_currency order.total %></td>
+  <td><%= order.note  %></td>
+  <td><%=  order.status %></td>
+</tr>

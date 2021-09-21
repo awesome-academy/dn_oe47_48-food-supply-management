@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       root "admins#index"
       resources :users, only: :index
       resources :products, only: :index
+      resources :orders, only: :index
     end
 
     resources :users, except: %i(index destroy)

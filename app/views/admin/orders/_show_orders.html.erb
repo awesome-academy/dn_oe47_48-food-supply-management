@@ -1,0 +1,26 @@
+<% provide(:title, t("orders.title")) %>
+<div class="container">
+  <h3 class="center_custome"><%= t "orders.title" %></h3>
+  <div class="row">
+    <div class="col-lg-12 col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><%= t "admin.order.buyer_inf" %></th>
+            <th scope="col"><%= t "admin.order.address" %></th>
+            <th scope="col"><%= t "admin.order.details" %></th>
+            <th scope="col"><%= t "admin.order.total" %></th>
+            <th scope="col"><%= t "admin.order.note" %></th>
+            <th scope="col"><%= t "admin.order.status" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render(@orders) || t("admin.order.nil") %>
+        </tbody>
+      </table>
+      <div class="center">
+        <%= paginate @orders, remote: true %>
+      </div>
+    </div>
+  </div>
+</div>
