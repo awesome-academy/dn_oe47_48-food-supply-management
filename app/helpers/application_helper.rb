@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def load_products
-    @carts = Product.load_by_ids(current_cart.keys)
+    @products_in_cart = Product.load_by_ids(current_cart.keys)
   end
 
   def into_money product
