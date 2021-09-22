@@ -2,11 +2,11 @@
   <div class="cart_link">
     <%= link_to "#" do %>
       <i class="fa fa-shopping-basket"></i>
-      <span><%= "#{@carts.count} item" %></span>
+      <span><%= "#{@products_in_cart.count} item" %></span>
     <% end %>
     <!--mini cart-->
     <div class="mini_cart">
-      <% @carts.each do |product| %>
+      <% @products_in_cart.each do |product| %>
       <div class="cart_item bottom">
         <div class="cart_img"><%= image_tag("logo/logo") %></div>
         <div class="cart_info">
