@@ -3,7 +3,7 @@
     <div class="product_thumb">
       <%= image_tag "product/product16", class: "secondary_img" %>
       <div class="quick_button">
-        <%= link_to t("products.show.detail_product"), product %>
+        <%= link_to t("products.show.detail_product"), [product.category, product] %>
       </div>
       <div class="double_base">
         <div class="product_sale">

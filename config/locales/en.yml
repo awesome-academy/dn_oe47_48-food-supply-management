@@ -1,4 +1,5 @@
 en:
+  tittle_project: "Food Supply Management"
   english: "English"
   vietnamese: "Vietnamese"
   user:
@@ -76,12 +77,14 @@ en:
       category_product: "Product categories"
     show:
       product_category_id: "product list by category "
+      out_of_products: "Out of products!"
   products:
     show:
       detail_product: "Detail Product"
       quantity: "Quantity"
       add_to_cart: "add to cart"
       share_on: "Share on:"
+      request_login: "Please login before adding to cart"
     search:
       not_found: "Not Found!"  
       search: "Search"
@@ -97,3 +100,7 @@ en:
       truncate: "&hellip;"
   alert:
     confirm: "Are you sure?"
+  carts:
+    create:
+      not_success: "This product cannot be added to the cart"
+      success: "Product added to cart successfully"

@@ -23,4 +23,5 @@ class Product < ApplicationRecord
     .where("categories.name LIKE ?", "%#{key}%")
   end)
   scope :search_products, ->(key){where "products.name LIKE ?", "%#{key}%"}
+  scope :load_by_ids, ->(ids){where id: ids}
 end

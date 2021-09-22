@@ -1,4 +1,5 @@
 vi:
+  tittle_project: "Quản lí cung cấp thực phẩm"
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
   user:
@@ -76,12 +77,14 @@ vi:
       category_product: "Danh mục sản phẩm"
     show:
       product_category_id: "Danh sách sản phẩm bởi danh mục "
+      out_of_products: "Hết sản phẩm!"
   products:
     show:
       detail_product: "Chi tiết sản phẩm"
       quantity: "Số lượng"
       add_to_cart: "thêm vào giỏ hàng"
       share_on: "Chia sẻ:"
+      request_login: "vui lòng đăng nhập khi thêm vào giỏ hàng"
     search:
       not_found: "không tìm thấy!"
       search: "Tìm kiếm"
@@ -97,3 +100,7 @@ vi:
       truncate: "&hellip;"
   alert:
     confirm: "Bạn có chắc chứ?"
+  carts:
+    create:
+      not_success: "Không thể thêm sản phẩm này vào giỏ hàng"
+      success: "thêm sản phẩm vào giỏ hàng thành công"
