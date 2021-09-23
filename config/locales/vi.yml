@@ -85,6 +85,15 @@ vi:
       add_to_cart: "thêm vào giỏ hàng"
       share_on: "Chia sẻ:"
       request_login: "vui lòng đăng nhập khi thêm vào giỏ hàng"
+      name: "Tên"
+      price: "Giá"
+      image: "Hình ảnh"
+      quatity: "Số lượng"
+      total_price: "Tổng giá"
+      action: "Hành động"
+      cart: "Giỏ Hàng"
+      cart_totals: "Tổng số giỏ hàng"
+      subtotal: "Tổng phụ"
     search:
       not_found: "không tìm thấy!"
       search: "Tìm kiếm"
@@ -104,3 +113,12 @@ vi:
     create:
       not_success: "Không thể thêm sản phẩm này vào giỏ hàng"
       success: "thêm sản phẩm vào giỏ hàng thành công"
+    update:
+      update_cart: "Cập Nhật"
+      delete_cart: "Xóa"
+      checkout: "Thanh Toán"
+      not_exist_products: "không tồn tại sản phẩm"
+      success: "cập nhật thành công"
+    delete:
+      delete_success: "xóa thành công"
+      alert_delete: "Bạn chắc chắn xóa sản phẩm này?"

@@ -85,6 +85,15 @@ en:
       add_to_cart: "add to cart"
       share_on: "Share on:"
       request_login: "Please login before adding to cart"
+      name: "Name"
+      price: "Price"
+      image: "Image"
+      quatity: "Quatity"
+      total_price: "Total Price"
+      action: "Action"
+      cart: "Cart"
+      cart_totals: "Cart Totals"
+      subtotal: "Subtotal"
     search:
       not_found: "Not Found!"  
       search: "Search"
@@ -104,3 +113,12 @@ en:
     create:
       not_success: "This product cannot be added to the cart"
       success: "Product added to cart successfully"
+    update:
+      update_cart: "Update"
+      delete_cart: "Delete"
+      checkout: "Proceed to Checkout"
+      not_exist_products: "not exist products"
+      success: "update success"
+    delete:
+      delete_success: "Delete_success"
+      alert_delete: "Are you sure delete this product?"

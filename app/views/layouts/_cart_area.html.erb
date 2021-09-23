@@ -2,23 +2,23 @@
   <div class="cart_link">
     <%= link_to "#" do %>
       <i class="fa fa-shopping-basket"></i>
-      <span><%= "#{@products_in_cart.count} item" %></span>
+      <span><%= "#{load_products.count} item" %></span>
     <% end %>
     <!--mini cart-->
     <div class="mini_cart">
-      <% @products_in_cart.each do |product| %>
-      <div class="cart_item bottom">
-        <div class="cart_img"><%= image_tag("logo/logo") %></div>
-        <div class="cart_info">
-          <%= link_to "Food", "#" %>
-          <span>
-            <%= "#{current_cart[product.id.to_s].round(1)}kg = #{number_to_currency(into_money(product), locale: :vi)}" %>
-          </span>
+      <% load_products.each do |product| %>
+        <div class="cart_item bottom">
+          <div class="cart_img"><%= image_tag("logo/logo") %></div>
+          <div class="cart_info">
+            <%= link_to product.name, cart_sessions_path %>
+            <span>
+              <%= "#{current_cart[product.id.to_s].round(1)}kg = #{number_to_currency(into_money(product), locale: :vi)}" %>
+            </span>
+          </div>
         </div>
-      </div>
       <% end %>
       <div class="cart_button view_cart">
-        <%= link_to "View Card", "#" %>
+        <%= link_to "View Card", cart_sessions_path %>
       </div>
     </div>
     <!--mini cart end-->

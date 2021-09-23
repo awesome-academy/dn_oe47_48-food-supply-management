@@ -1,0 +1,4 @@
+$('#flash_messase').html('<%= j render "layouts/flash" %>')
+$('#cart_area').html('<%= j render "layouts/cart_area" %>')
+$('#row-<%= @product_id %>').html('')
+$('#total').html('<%= into_money_cart %>')
