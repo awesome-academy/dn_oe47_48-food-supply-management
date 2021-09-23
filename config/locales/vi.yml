@@ -2,6 +2,7 @@ vi:
   tittle_project: "Quản lí cung cấp thực phẩm"
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
+  view_cart: "xem giỏ hàng"
   user:
     username: "Họ & tên"
     email: "Email"

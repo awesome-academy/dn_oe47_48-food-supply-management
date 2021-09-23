@@ -6,12 +6,12 @@
           <div class="main_menu">
             <nav>
               <ul>
-                <li><%= link_to t("static_pages.home.home"), "#" %></li>
-                <li><%= link_to t("static_pages.home.shop"), "#" %></li>
-                <li><%= link_to t("static_pages.home.aboutus"), "#" %></li>
+                <li><%= link_to t("static_pages.home.home"), root_path %></li>
+                <li><%= link_to t("static_pages.home.shop"), categories_path %></li>
+                <li><%= link_to t("static_pages.home.aboutus"), static_pages_about_path %></li>
                 <li><%= link_to t("static_pages.home.blog"), "#" %></li>
                 <li><%= link_to t("static_pages.home.pages"), "#" %></li>
-                <li><%= link_to t("static_pages.home.contactus"), "#" %></li>
+                <li><%= link_to t("static_pages.home.contactus"), static_pages_contact_path %></li>
               </ul>
             </nav>
           </div>
