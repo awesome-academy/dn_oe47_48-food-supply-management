@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.includes(:products).select(:name, :id)
+    @products = Product.page(params[:page])
+                       .per(Settings.length.pages_10)
   end
 
   def show

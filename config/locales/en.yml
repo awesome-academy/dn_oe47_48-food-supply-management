@@ -2,6 +2,7 @@ en:
   tittle_project: "Food Supply Management"
   english: "English"
   vietnamese: "Vietnamese"
+  view_cart: "View Cart"
   user:
     username: "Username"
     email: "Email"
