@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :cart_sessions
     resources :users
     resources :static_pages
+    resources :orders
 
     namespace :admin do
       root "admins#index"
