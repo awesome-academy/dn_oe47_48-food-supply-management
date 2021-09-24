@@ -10,13 +10,27 @@
   </td>
   <td>
     <% order.order_products.each do |order_product| %>
-      <span><%= t("admin.product.name") %>:</span><%= order_product.product.name %>
-      <span><%= t("admin.product.price") %>:</span><%= number_to_currency order_product.product.price %>
+      <span><%= t("admin.product.name") %>:</span><%= order_product.product_name %>
+      <span><%= t("admin.product.price") %>:</span><%= number_to_currency order_product.price %>
       <span><%= t("admin.product.quantity") %>:</span><%= order_product.quantity %>
       </br>
     <% end %>
   </td>
   <td><%= number_to_currency order.total %></td>
   <td><%= order.note  %></td>
-  <td><%=  order.status %></td>
+  <td id="status_<%= order.id %>">
+    <li class="dropdown">
+      <%= link_to("#", class: "dropdown-toggle", role: "button", data:{toggle: "dropdown"}) do %>
+        <%= t("orders.status.#{order.status}") %> <b class="caret"></b> 
+      <% end %>
+      <% unless order.completed? || order.canceled? %>
+        <ul class="dropdown-menu">
+          <% selects_order_status order do |li| %>
+            <%= li %>
+          <% end %>
+        <ul>
+      <% end %>
+    </li>
+  </td>
+  
 </tr>

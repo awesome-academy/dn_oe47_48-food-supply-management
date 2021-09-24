@@ -1,0 +1,12 @@
+<li class="dropdown">
+  <%= link_to("#", class: "dropdown-toggle", role: "button", data:{toggle: "dropdown"}) do %>
+    <%= t("orders.status.#{@order.status}") %> <b class="caret"></b> 
+  <% end %>
+  <% unless @order.completed? || @order.canceled? %>
+    <ul class="dropdown-menu">
+      <% selects_order_status @order do |li| %>
+        <%= li %>
+      <% end %>
+    <ul>
+  <% end %>
+</li>

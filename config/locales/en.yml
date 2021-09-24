@@ -48,6 +48,11 @@ en:
       total: "Total"
       note: "Note"
       status: "Status"
+      update_sc: "Success!"
+      update_failed: "Update failed!"
+      update_cant_change: "Can't change this status!"
+      update_pre: "Unable to change state to previous state."
+      update_not_ship: "Order hasn't been shipped!"
     delete: "Delete"
     edit: "Edit"
 
@@ -100,6 +105,11 @@ en:
       search: "Search"
   orders:
     title: "Order"
+    status:
+      processing: "Processing"
+      canceled: "Canceled"
+      shipped: "Shipped"
+      completed: "Completed"
 
   views:
     pagination:

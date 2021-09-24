@@ -68,10 +68,10 @@ buyers.each do |buyer|
   buyer.orders.create!(note: "none2")
   buyer.orders.each do |order|
     total = 0
-    order.order_products.create!(product_id: 1, quantity: 2)
-    order.order_products.create!(product_id: 2, quantity: 1)
+    order.order_products.create!(product_id: 1, quantity: 2, product_name: Product.find(1).name, price: Product.find(1).price)
+    order.order_products.create!(product_id: 2, quantity: 1, product_name: Product.find(2).name, price: Product.find(1).price)
     order.order_products.each do |order_product|
-      total += order_product.quantity * order_product.product.price
+      total += order_product.quantity * order_product.product_price
     end
     order.update!(total: total)
   end

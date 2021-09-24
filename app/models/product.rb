@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_many :order_prodcuts, dependent: :destroy
+  has_many :order_prodcuts, dependent: :nullify
   has_many :cart_details, dependent: :destroy
   has_one_attached :image
 
