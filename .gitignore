@@ -13,11 +13,9 @@ capybara-*.html
 /db/*.sqlite3-[0-9]*
 /public/system
 /coverage/
-/spec/
 *.orig
 rerun.txt
 pickle-email-*.html
-/spec/*
 
 # Ignore all logfiles and tempfiles.
 /log/*
