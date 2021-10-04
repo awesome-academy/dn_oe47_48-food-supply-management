@@ -3,6 +3,7 @@ vi:
     failure:
       not_found_in_database: "Không tìm thấy người dùng phù hợp!"
       invalid: "Email hoặc mật khẩu không đúng!"
+      unauthenticated: "Bạn cần đăng nhập hoặc đăng ký trước khi tiếp tục."
     sessions:
       signed_in: "Đăng nhập thành công!"
       signed_out: "Đăng xuất thành công!"

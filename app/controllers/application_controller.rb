@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
+
+  rescue_from CanCan::AccessDenied do |e|
+    flash[:warning] = e.message
+    redirect_to root_url
+  end
+
   before_action :set_locale, :create_cart, :load_products
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale

@@ -1,5 +1,6 @@
 require "spec_helper"
 require "factory_bot"
+# require "support/fix_localization"
 require "shared_examples/logged_in_false"
 require "shared_examples/is_admin_false"
 require "shared_examples/order/update_cannt_change"

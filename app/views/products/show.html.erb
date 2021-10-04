@@ -41,7 +41,7 @@
               <label><%= t("products.show.quantity") %></label>
               <%= number_field_tag :quantity, nil, step: 0.1, value: 0.1, required: true, min: 0.1, max:@product.quantity %>
               <%= hidden_field_tag :product_id, nil, value: @product.id %>
-              <% if logged_in? %>
+              <% if user_signed_in? %>
                 <%= button_tag t("products.show.add_to_cart"), class:  "button" %>
               <% else %>
                 <%= link_to t("products.show.request_login"), login_path, class: "button" %>
