@@ -1,6 +1,5 @@
 require "rails_helper"
-include SessionsHelper
-
+require_relative "./../../support/devise"
 RSpec.describe Admin::OrdersController, type: :controller do
   let(:admin){FactoryBot.create :user, role: :admin}
   let(:buyer){FactoryBot.create :user, role: :buyer}
@@ -12,7 +11,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
     context "when user logged in" do
       it_behaves_like "when user isn't admin"
       context "when user is admin" do
-        before{log_in admin}
+        login_admin
         it "assign @orders matched" do
           get :index
           expect(assigns(:orders)).to eq([order])
@@ -39,8 +38,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
     context "when user logged in" do
       it_behaves_like "when user isn't admin"
       context "when user is admin" do
-        before{log_in admin}
-
+        login_admin
         context "success when valid attributes" do
           before do
             @controller = Admin::OrdersController.new
@@ -82,7 +80,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
           end
         end
 
-        context "fail when order not found" do
+      context "fail when order not found" do
           before do
             put :update, xhr: true,
               params: {id: -1}

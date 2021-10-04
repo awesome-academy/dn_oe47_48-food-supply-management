@@ -19,4 +19,12 @@ module ApplicationHelper
   def current_cart
     @current_cart ||= session[:cart]
   end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def hidden_with_admin?
+    user_signed_in? && current_user.admin? ? false : true
+  end
 end

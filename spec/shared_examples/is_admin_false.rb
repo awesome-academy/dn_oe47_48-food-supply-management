@@ -1,6 +1,6 @@
 RSpec.shared_examples "when user isn't admin" do
+  login_buyer
   before do
-    log_in buyer
     get :index
   end
 
