@@ -1,7 +1,7 @@
 <div class="col-md-4 col-sm-6 col-lg-3">
   <div class="single_product">
     <div class="product_thumb">
-      <%= product_image product %>
+      <%= image_tag product.image %>
       <div class="quick_button">
         <%= link_to t("products.show.detail_product"), [product.category, product] %>
       </div>

@@ -13,10 +13,14 @@ module ApplicationHelper
   end
 
   def into_money_cart
-    @products_in_cart.sum{|product| into_money(product)}
+    load_products.sum{|product| into_money(product)}
   end
 
   def current_cart
     @current_cart ||= session[:cart]
+  end
+
+  def session_cart_exist?
+    current_cart.present?
   end
 end

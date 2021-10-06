@@ -24,4 +24,8 @@ class Product < ApplicationRecord
   end)
   scope :search_products, ->(key){where "products.name LIKE ?", "%#{key}%"}
   scope :load_by_ids, ->(ids){where id: ids}
+
+  def handle_update_quantity quantity_order
+    update_attribute :quantity, quantity - quantity_order
+  end
 end

@@ -8,9 +8,7 @@
     <div class="mini_cart">
       <% load_products.each do |product| %>
         <div class="cart_item bottom">
-          <div class="cart_imgsub">
-            <div class="cart_img"><%= product_image product %></div>
-          </div>
+            <div class="cart_img"><%= image_tag product.image %></div>
           <div class="cart_info">
             <%= link_to product.name, cart_sessions_path %>
             <span>

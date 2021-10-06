@@ -16,7 +16,7 @@
               </tr>
             </thead>
             <tbody>
-              <% @products_in_cart.each do |product| %>
+              <% load_products.each do |product| %>
                 <tr id="row-<%= product.id %>">
                   <%= render "cart_sessions/cart_row", product: product %>
                 </tr>
@@ -39,7 +39,7 @@
               <p id="total" class="cart_amount"><%= into_money_cart %></p>
             </div>
             <div class="checkout_btn">
-              <%= link_to t("carts.update.checkout"), "#" %>
+              <%= link_to t("carts.update.checkout"), orders_path, method: :post %>
             </div>
           </div>
       </div>
