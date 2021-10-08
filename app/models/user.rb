@@ -21,6 +21,7 @@ class User < ApplicationRecord
       maximum: Settings.length.max_phone
     },
     format: {with: VALID_PHONE_REGEX}
+  validates :street, presence: true
   validates :password, presence: true,
     length: {minimum: Settings.length.min_password}
   has_secure_password

@@ -38,6 +38,7 @@ group :test do
   gem "rails-controller-testing"
   gem "rspec-rails", "~> 4.0.1"
   gem "selenium-webdriver"
+  gem "shoulda-matchers", "~> 5.0"
   gem "simplecov"
   gem "simplecov-rcov"
   gem "webdrivers"
