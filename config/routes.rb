@@ -5,11 +5,13 @@ Rails.application.routes.draw do
     get "static_pages/home"
     get "static_pages/about"
     get "static_pages/contact"
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
     get "/search", to: "products#search"
-
+    devise_for :users
+    as :user do
+      get "/login", to: "devise/sessions#new"
+      post "/login", to: "devise/sessions#create"
+      delete "/logout", to: "devise/sessions#destroy"
+    end
     resources :cart_sessions, only: %i(index create) do
       collection do
         post "change"
@@ -18,7 +20,6 @@ Rails.application.routes.draw do
     end
     
     resources :cart_sessions
-    resources :users
     resources :static_pages
 
     namespace :admin do

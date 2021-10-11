@@ -5,19 +5,21 @@
           <div class="col-lg-12 col-md-6">
               <div class="account_form">
                   <h2>login</h2>
-                  <%=form_for(:sessions, url: login_path) do |f| %>
-                    <%= f.label :email %>
-                    <%= f.email_field :email, class: "form_control" %>
+                  <%=form_for(@user, as: :user, url: login_path) do |f| %>
+                    <%= f.label t("user.email") %>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form_control" %>
 
                     <%= f.label t("user.login.password") %>
-                    <%= f.password_field :password, class: "form_control" %>
+                    <%= f.password_field :password, autocomplete: "current-password", class: "form_control" %>
 
                     <div class="login_submit">
                       <%= link_to t("user.login.forgot_password"), "#" %>
 
-                      <%= f.label :remember_me, class: "checkbox inline" do %>
-                          <%= f.check_box :remember_me %>
-                          <span><%= t "user.login.remember" %></span>
+                      <% if devise_mapping.rememberable? %>
+                        <%= f.label :remember_me, class: "checkbox inline" do %>
+                            <%= f.check_box :remember_me %>
+                            <span><%= t "user.login.remember" %></span>
+                        <% end %>
                       <% end %>
 
                       <%= f.submit t("user.login.title"), class: "btn btn-primary", data: { disable_with: false } %>
@@ -28,3 +30,4 @@
       </div>
   </div>
 </div>
+<%= render "devise/shared/links" %>

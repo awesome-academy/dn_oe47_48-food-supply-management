@@ -22,6 +22,12 @@ en:
     logout:
       title: "Logout"
       success: "Logout success!"
+    signup:
+      title: "Sign up"
+    confirmation:
+      didnt_receive: "Didn't receive confirmation instructions?"
+    lockable:
+      didnt_recevie: "Didn't receive unlock instructions?"
     profile:
       title: "My profile"
     account: "My account"

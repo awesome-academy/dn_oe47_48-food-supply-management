@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
   include ApplicationHelper
   before_action :set_locale, :create_cart, :load_products
-
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
@@ -12,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in_user
-    return if logged_in?
+    return if user_signed_in?
 
     store_location
     flash[:warning] = t "user.login.require"

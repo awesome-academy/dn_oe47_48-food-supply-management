@@ -15,7 +15,7 @@
         <div class="col-lg-5 col-md-12">
           <div class="top_right text-right">
             <ul>
-              <% if logged_in? %>
+              <% if user_signed_in? %>
                 <li class="dropdown">
                   <%= link_to("#", class: "dropdown-toggle", role: "button", data:{toggle: "dropdown"}) do %>
                     <%= t "user.account" %> <b class="caret"></b> 

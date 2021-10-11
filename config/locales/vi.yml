@@ -22,6 +22,12 @@ vi:
     logout:
       title: "Đăng xuất"
       success: "Đăng xuất thành công!"
+    signup:
+      title: "Đăng ký"
+    confirmation:
+      didnt_receive: "Không nhận được hướng dẫn xác nhận?"
+    lockable:
+      didnt_recevie: "Không nhận được hướng dẫn mở khóa?"
     profile:
       title: "Thông tin của tôi"
     account: "Tài khoản"
