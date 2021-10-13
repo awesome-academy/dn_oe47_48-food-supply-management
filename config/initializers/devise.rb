@@ -15,4 +15,7 @@ Devise.setup do |config|
   config.email_regexp = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i.freeze
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
+  config.warden do |manager|
+    manager.failure_app = CustomFailure
+  end
 end

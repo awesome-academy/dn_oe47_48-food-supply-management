@@ -1,8 +1,14 @@
 class Admin::AdminsController < ApplicationController
-  before_action :logged_in_user, :is_admin?
+  before_action :authenticate_user!
+  authorize_resource
 
-  def index
-    @users = User.admin.order_by_name.page(params[:page])
-                 .per(Settings.per_page.per_10)
+  def index; end
+
+  private
+  def current_ability
+    controller_name_segments = params[:controller].split("/")
+    controller_name_segments.pop
+    controller_namespace = controller_name_segments.join("/").camelize
+    @current_ability ||= Ability.new(current_user, controller_namespace)
   end
 end

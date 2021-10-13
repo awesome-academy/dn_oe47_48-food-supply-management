@@ -139,3 +139,10 @@ vi:
     delete:
       delete_success: "xóa thành công"
       alert_delete: "Bạn chắc chắn xóa sản phẩm này?"
+  unauthorized:
+    manage:
+      all: "Bạn không có quyền truy cập trang này."
+
+  activerecord:
+    exceptions:
+      not_found: "%{model_name} không thể tìm thấy."

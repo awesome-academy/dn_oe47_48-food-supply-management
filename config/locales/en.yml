@@ -139,3 +139,11 @@ en:
     delete:
       delete_success: "Delete_success"
       alert_delete: "Are you sure delete this product?"
+  unauthorized:
+    manage:
+      all: "You are not authorized to access this page."
+
+  activerecord:
+    exceptions:
+      order:
+        not_found: " Order not found"
